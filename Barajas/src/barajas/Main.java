@@ -34,8 +34,16 @@ public static void main(String[] args) {
                     System.out.println(baraja.siguienteCarta());
                     break;
                 case 3:
-                    System.out.println("Los controles son: ");
-//                    opcion = 0;
+                    System.out.println("\nCartas disponibles: " + baraja.cartasDisponibles());
+                    break;
+                case 4:
+                    
+                    break;
+                case 5:
+                    
+                    break;
+                case 6:
+                    
                     break;
                 case 7:
                     System.out.println("¿Está seguro que desea salir (S/N)?");
@@ -63,7 +71,7 @@ public static void main(String[] args) {
 
         
 
-        System.out.println("\nCartas disponibles: " + baraja.cartasDisponibles());
+        
 
         System.out.println("\nDando 5 cartas:");
         System.out.println(baraja.darCartas(5));
