@@ -11,7 +11,7 @@ public class Barajas {
     public Barajas() {
         cartas = new ArrayList<>();
         cartasMonton = new ArrayList<>();
-        for (String palo : new String[] { "espadas", "bastos", "oros", "copas" }) {
+        for (String palo : new String[] { "espada", "basto", "oro", "copa" }) {
             for (int numero = 1; numero <= 12; numero++) {
                 if (numero != 8 && numero != 9) {
                     cartas.add(new Cartas(numero, palo));
