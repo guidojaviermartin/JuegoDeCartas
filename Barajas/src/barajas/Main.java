@@ -2,15 +2,15 @@ package barajas;
 
 import java.util.Scanner;
 
-public class Main{
-    
-public static void main(String[] args) {
-    System.out.println("Ingrese opcion");
-    Scanner leer = new Scanner(System.in);
-    Scanner leerCartas = new Scanner(System.in);
-    Barajas baraja = new Barajas();
-    int opcion = 10;
-    while (opcion != 0) {
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Ingrese opcion");
+        Scanner leer = new Scanner(System.in);
+        Scanner leerCartas = new Scanner(System.in);
+        Barajas baraja = new Barajas();
+        int opcion = 10;
+        while (opcion != 0) {
             System.out.println("MENU");
             System.out.println("1. Barajar");
             System.out.println("2. Siguiente carta");
@@ -47,7 +47,7 @@ public static void main(String[] args) {
                     baraja.cartasMonton();
                     break;
                 case 6:
-                    System.out.println("Mostrando baraja... " );
+                    System.out.println("Mostrando baraja... ");
                     baraja.mostrarBaraja();
                     break;
                 case 7:
@@ -61,12 +61,12 @@ public static void main(String[] args) {
                     } else {
                         if (!salida.toUpperCase().equals("N")) {
                             System.out.print("\u001B[31m");
-                            System.out.println( "Error. Opcion incorrecta");
+                            System.out.println("Error. Opcion incorrecta");
                             break;
                         }
                         break;
                     }
-                default : 
+                default:
                     System.out.println("Error vuelva a ingresar la opcion");
             }
         }
