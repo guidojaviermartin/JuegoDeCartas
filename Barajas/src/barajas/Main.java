@@ -7,6 +7,7 @@ public class Main{
 public static void main(String[] args) {
     System.out.println("Ingrese opcion");
     Scanner leer = new Scanner(System.in);
+    Scanner leerCartas = new Scanner(System.in);
     Barajas baraja = new Barajas();
     int opcion = 10;
     while (opcion != 0) {
@@ -37,13 +38,17 @@ public static void main(String[] args) {
                     System.out.println("\nCartas disponibles: " + baraja.cartasDisponibles());
                     break;
                 case 4:
-                    
+                    System.out.println("\nCuantas cartas quiere dar?");
+                    int cantCartas = leerCartas.nextInt();
+                    System.out.println(baraja.darCartas(cantCartas));
                     break;
                 case 5:
-                    
+                    System.out.println("\nCartas en el montón:");
+                    baraja.cartasMonton();
                     break;
                 case 6:
-                    
+                    System.out.println("Mostrando baraja... " );
+                    baraja.mostrarBaraja();
                     break;
                 case 7:
                     System.out.println("¿Está seguro que desea salir (S/N)?");
@@ -65,19 +70,6 @@ public static void main(String[] args) {
                     System.out.println("Error vuelva a ingresar la opcion");
             }
         }
-    
-    
-        
-
-        
-
-        
-
-        System.out.println("\nDando 5 cartas:");
-        System.out.println(baraja.darCartas(5));
-
-        System.out.println("\nCartas en el montón:");
-        baraja.cartasMonton();
     }
 
 }
