@@ -16,7 +16,7 @@ public class Barajas {
 
     public void resetear() {
         cartas.clear();
-        for (String palo : new String[]{"espadas", "bastos", "oros", "copas"}) {
+        for (String palo : new String[] { "espadas", "bastos", "oros", "copas" }) {
             for (int numero = 1; numero <= 12; numero++) {
                 if (numero != 8 && numero != 9) {
                     cartas.add(new Cartas(numero, palo));
@@ -34,9 +34,10 @@ public class Barajas {
             System.out.println("No hay más cartas en la baraja.");
             return null;
         }
-        Cartas carta = cartas.remove(0);
-        cartasMonton.add(carta);
-        return carta;
+        Cartas e = cartas.get(0);
+        cartasMonton.add(e);
+        cartas.remove(0);
+        return e;
     }
 
     public int cartasDisponibles() {
@@ -72,6 +73,3 @@ public class Barajas {
         for (Cartas carta : cartas) {
             System.out.println(carta);
         }
-    }
-}
-    
